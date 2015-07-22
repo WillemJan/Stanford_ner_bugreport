@@ -1,0 +1,26 @@
+Stanford NER bugreport.
+
+There is a bug in the Stanford NER Library which results in fewer named-entities while processing the same text.
+
+What happens is the following:
+
+I start the stanford NER tool from command line as a server:
+(stanford-ner-2015-04-20)
+
+java -mx700m -cp ./stanford-ner.jar: edu.stanford.nlp.ie.NERServer -loadClassifier dutch.gz -port 1234
+
+Then I start a simple python script to get text in via telnet:
+In the first run I get 71 named-entities, in the second run I only get 69..
+
+python python-ner.py  > 1st_run
+python python-ner.py  > 2nd_run
+wfa010@lapbak:~$ diff 1st_run 2nd_run 
+16d15
+< Nous/B-PER
+48d46
+< Vive/B-PER
+
+This effect even might increase over runtime.
+
+At the National Library of the Netherlands we are currently processing milion's of ocr'ed texts with the stanford library,
+for more details see: http://dlib.org/dlib/july15/vanveen/07vanveen.html
