@@ -5,7 +5,7 @@ There is a bug in the Stanford NER Library which results in fewer named-entities
 What happens is the following:
 
 I start the stanford NER tool from command line as a server:
-(stanford-ner-2015-04-20)
+(stanford-ner-2015-04-20 and latest github build)
 
 java -mx700m -cp ./stanford-ner.jar: edu.stanford.nlp.ie.NERServer -loadClassifier dutch.gz -port 1234
 
