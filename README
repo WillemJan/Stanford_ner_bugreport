@@ -1,3 +1,16 @@
+Turns out it's not a bug, but a feature.
+
+The default value causing this behaviour was changed.
+
+See:
+
+https://github.com/stanfordnlp/CoreNLP/issues/83
+https://github.com/stanfordnlp/CoreNLP/commit/1820677c1a8c8dea8374509e50133670ee6248b0
+
+Case closed, mystery solved.
+
+===
+
 Stanford NER bugreport.
 
 There is a bug in the Stanford NER Library which results in fewer named-entities while processing the same text.
