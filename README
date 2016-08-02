@@ -37,3 +37,7 @@ This effect even might increase over runtime.
 
 At the National Library of the Netherlands we are currently processing milion's of ocr'ed texts with the stanford library,
 for more details see: http://dlib.org/dlib/july15/vanveen/07vanveen.html
+
+Implications: 
+Papers published before 2015-04-20 (Using Stanford-NER), not explicitly setting the flag,
+measuring Recall and or Precision, check yo numbers.
